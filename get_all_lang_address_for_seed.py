@@ -14,9 +14,11 @@ LANG_MAP = {
 
 def generate_bip49_address(mnemonic, lang_str, addr_data):
     lang_enum = LANG_MAP.get(lang_str.lower())
+    
     if lang_enum is None:
-        raise ValueError(f"Unsupported mnemonic language: {lang_str}")
-
+        print(f"Skipping unsupported language: {lang_str}")
+        return None
+    
     # Generate seed from mnemonic and language
     seed_bytes = Bip39SeedGenerator(mnemonic, lang_enum).Generate()
 
