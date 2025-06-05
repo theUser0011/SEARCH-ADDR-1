@@ -17,7 +17,7 @@ def generate_bip49_address(mnemonic, lang_str, addr_data):
     lang_enum = LANG_MAP.get(lang_str.lower())
     
     if lang_enum is None:
-        print(f"Skipping unsupported language: {lang_str}")
+        # print(f"Skipping unsupported language: {lang_str}")
         return None
     
     # Generate seed from mnemonic and language

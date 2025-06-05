@@ -9,7 +9,7 @@ language_files = {
     "chinese_traditional": "bip39_chinese_traditional.txt",
     "french": "bip39_french.txt",
     "italian": "bip39_italian.txt",
-    "japanese": "bip39_japanese.txt",
+    # "japanese": "bip39_japanese.txt",
     "korean": "bip39_korean.txt",
     "spanish": "bip39_spanish.txt"
 }
