@@ -11,7 +11,7 @@ def get_telegram_config():
         "chat_id": key_doc['TELEGRAM_CHAT_ID'],
         "uname": key_doc['TELEGRAM_BOT_UNAME']
     }
-
+ 
 def send_to_telegram(msg):
     try:
         url = f"https://api.telegram.org/bot{telegram_config['token']}/sendMessage"
