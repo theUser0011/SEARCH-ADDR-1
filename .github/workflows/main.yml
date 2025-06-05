@@ -1,0 +1,30 @@
+name: Run Final Script Every 3 Hours
+
+on:
+  schedule:
+    - cron: "0 */3 * * *"  # Runs every 3 hours
+  workflow_dispatch:       # Allow manual trigger from GitHub UI
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    timeout-minutes: 190  # 3 hours 10 minutes
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        run: |
+          pip install requests pymongo gdown bip-utils
+
+      - name: Run final.py
+        env:
+          MONGO_URL: ${{ secrets.MONGO_URL }}
+        run: |
+          python final.py
