@@ -14,7 +14,7 @@ def get_json_data():
     print(f"Trying to download: {title} from {url}")
 
     try:
-        gdown.download(url, output=title, quiet=False)
+        gdown.download(url, output=title, quiet=True)
     except Exception as e:
         print(f"Skipping {title} due to error: {e}")
     with open("data.json", 'r', encoding='utf-8') as f:

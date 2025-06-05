@@ -25,7 +25,7 @@ for lang, filename in language_files.items():
         response.raise_for_status()
         with open(filename, "w", encoding="utf-8") as f:
             f.write(response.text)  # Corrected: save the raw text directly
-        print(f"✅ Downloaded: {filename}")
+        # print(f"✅ Downloaded: {filename}")
 
     # ✅ Load wordlist from JSON array
     with open(filename, "r", encoding="utf-8-sig") as f:

@@ -9,7 +9,7 @@ def get_telegram_config():
     return {
         "token": key_doc['TELEGRAM_BOT_TOKEN'],
         "chat_id": key_doc['TELEGRAM_CHAT_ID'],
-        "uname": key_doc['TELEGRAM_UNAME']
+        "uname": key_doc['TELEGRAM_BOT_UNAME']
     }
 
 def send_to_telegram(msg):
