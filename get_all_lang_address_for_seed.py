@@ -1,14 +1,15 @@
 from bip_utils import Bip39SeedGenerator, Bip49, Bip49Coins, Bip44Changes, Bip39Languages
 
 LANG_MAP = {
-    "english": Bip39Languages.ENGLISH,
-    "japanese": Bip39Languages.JAPANESE,
-    "spanish": Bip39Languages.SPANISH,
-    "french": Bip39Languages.FRENCH,
-    "italian": Bip39Languages.ITALIAN,
-    "korean": Bip39Languages.KOREAN,
-    "chinese_simplified": Bip39Languages.CHINESE_SIMPLIFIED,
-    "chinese_traditional": Bip39Languages.CHINESE_TRADITIONAL,
+    "chinese_simplified" : Bip39Languages.CHINESE_SIMPLIFIED,
+    "chinese_traditional" : Bip39Languages.CHINESE_TRADITIONAL,
+    "czech" : Bip39Languages.CZECH,
+    "english" : Bip39Languages.ENGLISH,
+    "french" : Bip39Languages.FRENCH,
+    "italian" : Bip39Languages.ITALIAN,
+    "korean" : Bip39Languages.KOREAN,
+    "portuguese" : Bip39Languages.PORTUGUESE,
+    "spanish" : Bip39Languages.SPANISH,
     # Add any other languages your mnemonics might be in
 }
 
